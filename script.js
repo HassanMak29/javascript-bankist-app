@@ -41,6 +41,7 @@ const summaryZakat = document.querySelector(".summary__amount--zakat");
 const logoutTimer = document.querySelector(".logout-time");
 const movementsList = document.querySelector(".movements");
 const app = document.querySelector(".main");
+const welcomeScreen = document.querySelector(".welcome-screen");
 
 const inputUsername = document.querySelector(".username");
 const inputPin = document.querySelector(".pin");
@@ -78,6 +79,7 @@ function getUser(input) {
 // getUser(inputUsername.value);
 
 const updateUI = (account, sort = false) => {
+  welcomeScreen.style.opacity = 0;
   message.textContent = `Welcome back, ${currentAccount.owner.split(" ")[0]}`;
   currentDate.textContent = `As of ${new Intl.DateTimeFormat("en-US", {
     dateStyle: "medium",
@@ -184,6 +186,7 @@ const startLogoutTimer = (time = 120) => {
       clearInterval(timer);
       message.textContent = "Log in to get started";
       app.style.opacity = 0;
+      welcomeScreen.style.opacity = 100;
     }
 
     time--;
