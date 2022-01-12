@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Bankist</title>
+    <link rel="shortcut icon" href="logo.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="nav">
+      <p class="welcome-message">Log in to get started</p>
+      <img src="logo.png" alt="logo image" class="logo" />
+      <form class="fields">
+        <input type="text" placeholder="user" class="field username" />
+        <input type="text" placeholder="PIN" maxlength="4" class="field pin" />
+        <button class="login-btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="main">
+      <div class="balance">
+        <div class="balance__info">
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">As of 01/01/2022, 21:17</p>
+        </div>
+        <div class="balance__amount">25 952,59 €</div>
+      </div>
+
+      <div class="movements">
+        <!-- <div class="movement movement-2">
+          <div class="movement__type movement__type--deposit">2 deposit</div>
+          <p class="movement__date movement__date--2">01/08/2020</p>
+          <p class="movement__amount movement__amount--2">1300,00 €</p>
+        </div>
+        <div class="movement movement-1">
+          <div class="movement__type movement__type--withdrawal">
+            1 withdrawal
+          </div>
+          <p class="movement__date movement__date--1">02/04/2021</p>
+          <p class="movement__amount movement__amount--1">36,23 €</p>
+        </div> -->
+      </div>
+
+      <div class="summary">
+        <div class="summary__type summary__type--in">
+          in &nbsp;
+          <span class="summary__amount summary__amount--in">23 234,22 €</span>
+        </div>
+        <div class="summary__type summary__type--out">
+          out &nbsp;
+          <span class="summary__amount summary__amount--out">238,22 €</span>
+        </div>
+        <div class="summary__type summary__type--zakat">
+          zakat
+          <span class="summary__amount summary__amount--zakat">1654,94 €</span>
+        </div>
+        <button class="btn-sort">sort &darr;</button>
+      </div>
+
+      <div class="function transfer">
+        <h3 class="function__title">Transfer money</h3>
+        <form class="function__fields">
+          <div class="function__field">
+            <input
+              type="text"
+              name="transfer-to"
+              class="input__transfer-user"
+            />
+            <label for="transfer-to">Transfer to</label>
+          </div>
+          <div class="function__field">
+            <input
+              type="number"
+              name="amount"
+              min="0"
+              class="input__transfer-amount"
+            />
+            <label for="amount">Amount</label>
+          </div>
+          <button class="btn transfer-btn">&rarr;</button>
+        </form>
+      </div>
+
+      <div class="function request">
+        <h3 class="function__title">Request loan</h3>
+        <form class="function__fields">
+          <div class="function__field">
+            <input
+              type="number"
+              name="amount"
+              min="0"
+              class="input__request-amount"
+            />
+            <label for="amount">Amount</label>
+          </div>
+          <button class="btn loan-btn">&rarr;</button>
+        </form>
+      </div>
+
+      <div class="function close">
+        <h3 class="function__title">Close account</h3>
+        <form class="function__fields">
+          <div class="function__field">
+            <input type="text" name="Confirm-user" class="input__close-user" />
+            <label for="Confirm-user">Confirm user</label>
+          </div>
+          <div class="function__field">
+            <input type="text" name="Confirm-pin" class="input__close-pin" />
+            <label for="Confirm-pin">Confirm pin</label>
+          </div>
+          <button class="btn close-btn">&rarr;</button>
+        </form>
+      </div>
+
+      <p class="timer">
+        You will be logged out in <span class="logout-time">00:59</span>
+      </p>
+    </main>
+  </body>
+</html>
